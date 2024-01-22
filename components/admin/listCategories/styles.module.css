@@ -1,0 +1,104 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 700px;
+}
+.addBtn {
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+  transition: all 200ms ease-in-out;
+  cursor: pointer;
+  background-color: var(--accent-clr-200);
+  color: var(--primary-clr-200);
+  border-radius: var(--border-radius-200);
+}
+.addBtn:hover {
+  background-color: transparent;
+  border: 1px solid var(--primary-clr-200);
+}
+.addContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.imgContainer {
+  position: relative;
+  width: 40%;
+  aspect-ratio: 1/1;
+  border-radius: var(--border-radius-200);
+  overflow: hidden;
+}
+.input {
+  width: 90%;
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+  background-color: var(--primary-clr-200);
+  color: var(--secondary-clr-200);
+  border-radius: var(--border-radius-200);
+}
+.finishBtn {
+  padding-inline: 2rem;
+  padding-block: 0.5rem;
+  border-radius: var(--border-radius-200);
+  background-color: var(--accent-clr-200);
+  color: var(--primary-clr-200);
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+.finishBtn:hover {
+  background-color: transparent;
+  border: 1px solid var(--primary-clr-200);
+}
+.categoryContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.leftContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+.imgContainer {
+  position: relative;
+  width: 6rem;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  border-radius: var(--border-radius-400);
+}
+.name {
+  font-size: var(--fs-400);
+  font-weight: var(--fw-bold);
+  color: var(--primary-clr-200);
+  letter-spacing: 1px;
+}
+.deleteBtn {
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+  border-radius: var(--border-radius-200);
+  background-color: var(--accent-clr-200);
+  color: var(--primary-clr-200);
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+.deleteBtn:hover {
+  background-color: transparent;
+  border: 1px solid var(--primary-clr-200);
+}

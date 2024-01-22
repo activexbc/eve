@@ -1,0 +1,35 @@
+.container {
+  width: 75%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.title {
+  font-size: var(--fs-600);
+  font-weight: var(--fw-light);
+  letter-spacing: 1px;
+  color: var(--primary-clr-200);
+}
+.priceWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.priceWrapper:nth-child(1) {
+  font-size: var(--fs-400);
+  font-weight: var(--fw-semibold);
+  color: var(--primary-clr-200);
+}
+.priceWrapper:nth-child(2) {
+  font-size: var(--fs-300);
+  font-weight: var(--fw-bold);
+  color: var(--primary-clr-100);
+}
+.priceWrapper:last-child {
+  margin-top: 2rem;
+}

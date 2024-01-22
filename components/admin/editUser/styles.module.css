@@ -1,0 +1,63 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.title {
+  font-size: var(--fs-600);
+  font-weight: var(--fw-light);
+  color: var(--primary-clr-200);
+  margin-bottom: 2rem;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 700px;
+}
+.input {
+  --padding: 1rem;
+  width: calc(100% - var(--padding));
+  padding-inline: var(--padding);
+  padding-block: 0.5rem;
+  border-radius: var(--border-radius-200);
+  font-size: var(--fs-300);
+  font-weight: var(--fw-bold);
+  color: var(--secondary-clr-600);
+  background-color: var(--primary-clr-200);
+}
+.input::placeholder {
+  color: var(--secondary-clr-600);
+}
+.isAdminContainer {
+  width: calc(100% - 1rem);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: 0.5rem;
+  padding-inline: 1rem;
+  background-color: var(--primary-clr-200);
+  border-radius: var(--border-radius-200);
+  font-size: var(--fs-300);
+  font-weight: var(--fw-bold);
+  color: var(--secondary-clr-600);
+}
+.btn {
+  width: calc(100% + 1rem);
+  padding-block: 0.5rem;
+  border-radius: var(--border-radius-200);
+  background-color: var(--accent-clr-200);
+  color: var(--primary-clr-200);
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+.btn:hover {
+  background-color: transparent;
+  border: 1px solid var(--primary-clr-200);
+}

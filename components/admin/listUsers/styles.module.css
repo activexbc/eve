@@ -1,0 +1,65 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.title {
+  font-size: var(--fs-600);
+  font-weight: var(--fw-light);
+  color: var(--primary-clr-200);
+  margin-bottom: 2rem;
+}
+.wrapper {
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.userContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+.nameContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+.name {
+  font-size: var(--fs-400);
+  font-weight: var(--fw-bold);
+  color: var(--primary-clr-200);
+}
+.name::first-letter {
+  text-transform: capitalize;
+}
+.email {
+  font-size: var(--fs-300);
+  font-weight: var(--fw-bold);
+  color: var(--primary-clr-100);
+}
+.btnsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.icon {
+  font-size: var(--fs-400);
+  font-weight: var(--fw-bold);
+  color: var(--primary-clr-100);
+  transition: all 200ms ease-in-out;
+}
+.icon:hover {
+  color: var(--primary-clr-200);
+}

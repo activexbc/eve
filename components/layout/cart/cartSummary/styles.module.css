@@ -1,0 +1,63 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+}
+.title {
+  font-size: var(--fs-500);
+  font-weight: var(--fw-semibold);
+  color: var(--primary-clr-100);
+  margin-bottom: 2rem;
+}
+.fieldContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.fieldText {
+  font-size: var(--fw-300);
+  font-weight: var(--fw-bold);
+  flex: 1;
+  color: var(--primary-clr-100);
+}
+.fieldPrice {
+  font-size: var(--fw-300);
+  font-weight: var(--fw-bold);
+  color: var(--primary-clr-100);
+}
+.fieldContainer:nth-child(5) {
+  margin-top: 3rem;
+}
+.confirmBtn {
+  width: 100%;
+  padding-block: 0.5rem;
+  border-radius: var(--border-radius-200);
+  background-color: var(--accent-clr-200);
+  color: var(--primary-clr-200);
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+.confirmBtn:hover {
+  background-color: transparent;
+  border: 1px solid var(--primary-clr-200);
+}
+.cancelBtn {
+  width: 100%;
+  padding-block: 0.5rem;
+  border-radius: var(--border-radius-200);
+  background-color: transparent;
+  color: var(--primary-clr-200);
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+  border: 1px solid var(--primary-clr-200);
+}
+.cancelBtn:hover {
+  background-color: var(--accent-clr-200);
+  border: none;
+}

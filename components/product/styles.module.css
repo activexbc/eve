@@ -1,0 +1,140 @@
+.container {
+  --height: 30rem;
+  padding-inline: 2rem;
+  padding-block: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  min-height: var(--height);
+}
+.imagesContainer {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.imgContainer {
+  position: relative;
+  width: 40%;
+  max-width: 400px;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  border-radius: var(--border-radius-400);
+}
+.imagesList {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  margin: 0 auto;
+}
+.smallImgContainer {
+  position: relative;
+  width: 80px;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  border-radius: var(--border-radius-200);
+  cursor: pointer;
+}
+.title {
+  font-size: var(--fs-600);
+  font-weight: var(--fw-light);
+  letter-spacing: 1px;
+  color: var(--primary-clr-200);
+  display: none;
+  max-width: 100%;
+  text-align: center;
+}
+.title1 {
+  font-size: var(--fs-600);
+  font-weight: var(--fw-light);
+  letter-spacing: 1px;
+  color: var(--primary-clr-200);
+  max-width: 100%;
+  text-align: center;
+}
+.title1::first-letter,
+.title::first-letter {
+  text-transform: capitalize;
+}
+.contentContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.desc {
+  font-size: var(--fs-300);
+  font-weight: var(--fw-bold);
+  max-width: 80%;
+  text-align: center;
+  flex: 1;
+  color: var(--primary-clr-100);
+}
+.desc::first-letter {
+  text-transform: capitalize;
+}
+.btnContainer {
+  margin-top: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+.priceContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+.price,
+.stock {
+  font-size: var(--fs-300);
+  font-weight: var(--fw-semibold);
+  color: var(--primary-clr-100);
+}
+.red {
+  color: red;
+}
+.green {
+  color: green;
+}
+.btn {
+  padding-block: 0.5rem;
+  padding-inline: 1rem;
+  color: var(--primary-clr-200);
+  background-color: var(--accent-clr-200);
+  border-radius: var(--border-radius-200);
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+.btn:hover {
+  background-color: transparent;
+  border: 1px solid var(--primary-clr-200);
+}
+
+.reviewContainer {
+  margin-top: 4rem;
+  padding-inline: 2rem;
+  min-height: 70vh;
+}
+
+@media (min-width: 1100px) {
+  .container {
+    flex-direction: row;
+  }
+  .imgContainer {
+    width: 100%;
+  }
+  .title {
+    display: inline-block;
+  }
+  .title1 {
+    display: none;
+  }
+}

@@ -1,0 +1,58 @@
+.container {
+  margin-top: 2rem;
+  padding-block: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  width: 100%;
+}
+.addContainer {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0 auto;
+}
+.addTitle {
+  font-size: var(--fs-400);
+  font-weight: var(--fw-light);
+  letter-spacing: 1px;
+  color: var(--primary-clr-200);
+}
+.textarea {
+  width: calc(100% -0.5rem);
+  min-height: 80px;
+  background-color: var(--primary-clr-100);
+  opacity: 0.7;
+  border-radius: var(--border-radius-200);
+  resize: none;
+  outline: none;
+  padding: 0.5rem;
+  font-size: var(--fs-300);
+  font-weight: var(--fw-bold);
+  color: var(--secondary-clr-200);
+}
+.textarea::placeholder {
+  color: var(--secondary-clr-200);
+}
+.addBtn {
+  width: max-content;
+  padding: 0.5rem;
+  align-self: flex-end;
+  border-radius: var(--border-radius-200);
+  background-color: var(--accent-clr-200);
+  cursor: pointer;
+  color: var(--primary-clr-200);
+  transition: all 200ms ease-in-out;
+}
+.addBtn:hover {
+  border: 1px solid var(--primary-clr-200);
+  background-color: transparent;
+}
+@media (min-width: 1100px) {
+  .container {
+    width: 60%;
+    margin: 0 auto;
+  }
+}

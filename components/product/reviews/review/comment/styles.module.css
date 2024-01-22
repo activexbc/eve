@@ -1,0 +1,56 @@
+.wrapper {
+  width: 100%;
+}
+.commentContainer {
+  margin-left: 2rem;
+  width: 100%;
+}
+.addCommentContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+.inputContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 600px;
+}
+.input {
+  width: 100%;
+  padding-block: 0.5rem;
+  padding-inline: 1rem;
+  background-color: transparent;
+  color: var(--primary-clr-100);
+  text-wrap: wrap;
+  resize: none;
+  outline: none;
+  border: none;
+  font-size: var(--fs-300);
+  font-weight: var(--fw-bold);
+}
+
+.input::placeholder {
+  color: var(--primary-clr-100);
+  font-size: var(--fs-300);
+  font-weight: var(--fw-bold);
+}
+.addCommentBtn {
+  padding-block: 0.5rem;
+  padding-inline: 1rem;
+  border-radius: var(--border-radius-400);
+  background-color: var(--accent-clr-200);
+  color: var(--primary-clr-200);
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+  font-size: var(--fs-300);
+  font-weight: var(--fw-bold);
+}
+.addCommentBtn:hover {
+  border: 1px solid var(--primary-clr-200);
+  background-color: transparent;
+}

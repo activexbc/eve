@@ -1,0 +1,30 @@
+.container {
+  height: var(--header-height);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 1rem;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.searchWrapper {
+  flex: 1;
+  display: none;
+  animation: fade 2s ease;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 768px) {
+  .searchWrapper {
+    display: flex;
+  }
+}

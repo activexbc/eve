@@ -1,0 +1,27 @@
+{
+  "name": "everybodyeatzv1",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.0.1",
+    "firebase": "^10.7.1",
+    "next": "14.0.4",
+    "next-navigation": "^1.0.6",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-icons": "^4.12.0",
+    "react-query": "^3.39.3",
+    "react-redux": "^9.0.4",
+    "redux-thunk": "^3.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^8",
+    "eslint-config-next": "14.0.4"
+  }
+}

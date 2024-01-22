@@ -1,0 +1,40 @@
+.container {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.input {
+  width: 100%;
+  padding-block: 0.5rem;
+  padding-inline: 1rem;
+  border-top-left-radius: var(--border-radius-200);
+  border-bottom-left-radius: var(--border-radius-200);
+  font-size: var(--fs-300);
+  font-weight: var(--fw-light);
+  color: var(--secondary-clr-200);
+  background-color: var(--primary-clr-200);
+}
+.maxWidth {
+  max-width: 400px;
+}
+.input::placeholder {
+  color: var(--secondary-clr-200);
+}
+.btn {
+  font-size: var(--fs-300);
+  font-weight: var(--fw-light);
+  color: var(--primary-clr-200);
+  background-color: var(--accent-clr-200);
+  padding-block: 0.5rem;
+  padding-inline: 1rem;
+  border-top-right-radius: var(--border-radius-200);
+  border-bottom-right-radius: var(--border-radius-200);
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+.btn:hover {
+  border: 1px solid var(--primary-clr-200);
+  background-color: transparent;
+}
