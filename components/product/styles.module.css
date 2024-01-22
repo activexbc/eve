@@ -17,7 +17,7 @@
 }
 .imgContainer {
   position: relative;
-  width: 40%;
+  width: 100%;
   max-width: 400px;
   aspect-ratio: 1/1;
   overflow: hidden;
@@ -28,11 +28,10 @@
   flex-direction: row;
   align-items: center;
   gap: 1rem;
-  margin: 0 auto;
 }
 .smallImgContainer {
   position: relative;
-  width: 80px;
+  width: 60px;
   aspect-ratio: 1/1;
   overflow: hidden;
   border-radius: var(--border-radius-200);
@@ -128,13 +127,17 @@
   .container {
     flex-direction: row;
   }
-  .imgContainer {
-    width: 100%;
-  }
+
   .title {
     display: inline-block;
   }
   .title1 {
     display: none;
+  }
+  .imageList {
+    margin: 0 auto;
+  }
+  .smallImgContainer {
+    width: 80px;
   }
 }
