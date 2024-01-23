@@ -2,6 +2,7 @@
 
 import { addPostWithImages } from "@/hooks/admin";
 import { getDataByCollection } from "@/hooks/main";
+import heic2any from "heic2any";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import styles from "./styles.module.css";
@@ -46,7 +47,11 @@ export default function AdminAddProduct() {
 
   useEffect(() => {
     getDataByCollection("categories", dispatch);
-  }, [dispatch]);
+
+    return () => {
+      setConvertedFiles([]);
+    };
+  }, []);
 
   if (!categories) {
     return;
