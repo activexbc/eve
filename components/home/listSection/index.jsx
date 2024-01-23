@@ -1,6 +1,5 @@
 "use client";
 
-import { img } from "@/data/bannerInfo";
 import { saveToCart } from "@/hooks/cart";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -26,7 +25,7 @@ export default function ListSection() {
             onClick={() => router.push(`/product/${product.id}`)}
           >
             <Image
-              src={product ? product?.images : img}
+              src={product.images[0]}
               alt={product.name}
               fill
               priority
