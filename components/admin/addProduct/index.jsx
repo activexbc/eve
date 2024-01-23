@@ -51,7 +51,7 @@ export default function AdminAddProduct() {
     return () => {
       setConvertedFiles([]);
     };
-  }, []);
+  }, [dispatch]);
 
   if (!categories) {
     return;
