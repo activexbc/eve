@@ -17,6 +17,10 @@ export default function AdminListProducts({ products, perPage, start, end }) {
     searchProducts(search).then((res) => setSearchData(res));
   }, [search]);
 
+  if (!products) {
+    return <div>Loading</div>;
+  }
+
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>List Products</h1>
