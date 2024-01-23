@@ -49,11 +49,11 @@ export default function ProductReviews({ productId }) {
         </div>
       )}
 
-      {reviews.length == 0 ? (
+      {reviews?.length == 0 ? (
         <h1>No reviews</h1>
       ) : (
         <>
-          {reviews.map((item) => (
+          {reviews?.map((item) => (
             <ReviewItem
               item={item}
               key={item.id}

@@ -11,6 +11,7 @@ export default function ProductDetails({ product }) {
   if (!product) {
     return <div>Loading</div>;
   }
+  console.log(product);
 
   return (
     <>
@@ -19,13 +20,7 @@ export default function ProductDetails({ product }) {
         <div className={styles.imagesContainer}>
           <div className={styles.imgContainer}>
             <Image
-              src={
-                previewImg
-                  ? previewImg
-                  : product.images[0]
-                  ? product.images[0]
-                  : ""
-              }
+              src={previewImg ? previewImg : product ? product.images : ""}
               alt={product.name}
               fill
               priority
@@ -33,7 +28,7 @@ export default function ProductDetails({ product }) {
             />
           </div>
           <div className={styles.imagesList}>
-            {product?.images.map((img, index) => (
+            {product?.images?.map((img, index) => (
               <div
                 className={styles.smallImgContainer}
                 key={index}
