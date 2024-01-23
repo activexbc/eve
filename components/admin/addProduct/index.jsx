@@ -15,7 +15,33 @@ export default function AdminAddProduct() {
   const [stock, setStock] = useState("");
   const [previewURL, setPreviewURL] = useState(null);
   const [images, setImages] = useState([]);
+  const [convertedFiles, setConvertedFiles] = useState([]);
 
+  const convertDngToJpeg = async (dngFiles) => {
+    try {
+      const converted = await Promise.all(
+        dngFiles.map(async (dngFile) => {
+          // Check if the file needs conversion based on its type
+          if (dngFile.type !== "image/jpeg") {
+            const blob = await heic2any({
+              buffer: dngFile,
+              toType: "image/jpeg",
+            });
+            return new File([blob], `${dngFile.name}.jpeg`, {
+              type: "image/jpeg",
+            });
+          } else {
+            // File is already in JPEG format, no need to convert
+            return dngFile;
+          }
+        })
+      );
+
+      setConvertedFiles(converted);
+    } catch (error) {
+      console.error("Error converting DNG to JPEG:", error);
+    }
+  };
   const categories = useSelector((state) => state.data.categories.categories);
 
   useEffect(() => {
@@ -67,7 +93,14 @@ export default function AdminAddProduct() {
   const handleClick = async (e) => {
     e.preventDefault();
     await convertDngToJpeg(images);
-    addPostWithImages(name, desc, category, price, stock, images);
+    addPostWithImages(
+      name,
+      desc,
+      category,
+      price,
+      stock,
+      convertedFiles ? convertedFiles : images
+    );
   };
 
   return (
