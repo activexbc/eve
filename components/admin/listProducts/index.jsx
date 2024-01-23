@@ -17,8 +17,6 @@ export default function AdminListProducts({ products, perPage, start, end }) {
     searchProducts(search).then((res) => setSearchData(res));
   }, [search]);
 
-  console.log(searchData);
-
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>List Products</h1>
@@ -34,7 +32,7 @@ export default function AdminListProducts({ products, perPage, start, end }) {
               <div className={styles.productContainer} key={product.id}>
                 <div className={styles.imgContainer}>
                   <Image
-                    src={product.images[0]}
+                    src={product?.images[0]}
                     alt={product.name}
                     priority
                     sizes="(min-width: 50px)"
