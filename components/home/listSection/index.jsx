@@ -15,6 +15,8 @@ export default function ListSection() {
     return;
   }
 
+  console.log(products);
+
   return (
     <div className={styles.container}>
       {products?.map((product) => (
@@ -24,7 +26,7 @@ export default function ListSection() {
             onClick={() => router.push(`/product/${product.id}`)}
           >
             <Image
-              src={product ? product.images[0] : img}
+              src={product ? product?.images : img}
               alt={product.name}
               fill
               priority
