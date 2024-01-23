@@ -36,7 +36,7 @@ export default function AdminListProducts({ products, perPage, start, end }) {
               <div className={styles.productContainer} key={product.id}>
                 <div className={styles.imgContainer}>
                   <Image
-                    src={product?.images[0]}
+                    src={product?.images[0] ? product.images[0] : ""}
                     alt={product.name}
                     priority
                     sizes="(min-width: 50px)"
