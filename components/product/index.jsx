@@ -8,7 +8,7 @@ import styles from "./styles.module.css";
 export default function ProductDetails({ product }) {
   const [previewImg, setPreviewImg] = useState("");
 
-  if (!product.images) {
+  if (!product) {
     return <div>Loading</div>;
   }
 
@@ -19,7 +19,13 @@ export default function ProductDetails({ product }) {
         <div className={styles.imagesContainer}>
           <div className={styles.imgContainer}>
             <Image
-              src={previewImg ? previewImg : product.images[0]}
+              src={
+                previewImg
+                  ? previewImg
+                  : product.images[0]
+                  ? product.images[0]
+                  : ""
+              }
               alt={product.name}
               fill
               priority
