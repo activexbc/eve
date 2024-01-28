@@ -8,8 +8,7 @@ import {
   removeReviewLike,
 } from "@/hooks/review";
 import { useEffect, useState } from "react";
-import { FaHeart, FaRegComment } from "react-icons/fa";
-import { FaRegHeart } from "react-icons/fa6";
+import { FaRegComment } from "react-icons/fa";
 import { MdDelete, MdEdit } from "react-icons/md";
 import { useSelector } from "react-redux";
 import ReviewComment from "./comment";
@@ -82,11 +81,11 @@ export default function ReviewItem({ item, productId, setLoading }) {
         ) : null}
         {currentUser && (
           <button className={styles.btnContainer} onClick={handleClick}>
-            {like == true ? (
-              <FaHeart className={styles.icon} />
-            ) : like == false ? (
-              <FaRegHeart className={styles.icon} />
-            ) : null}
+            <div
+              className={`${styles.heart} ${
+                like == true ? styles.heartAnimation : null
+              }`}
+            />
             <p>Like</p>
           </button>
         )}

@@ -51,7 +51,7 @@ export default function ReviewComment({
                 </div>
               </div>
             )}
-            <div>
+            <div className={styles.commentsWrapper}>
               {commentsList?.map((item) => (
                 <CommentItem key={item.id} item={item} />
               ))}

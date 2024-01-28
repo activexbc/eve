@@ -70,6 +70,50 @@
   color: var(--primary-clr-100);
   margin-left: 1.5rem;
 }
+.heart {
+  background-color: var(--primary-clr-100);
+  display: inline-block;
+  height: 30px;
+  position: relative;
+  top: 0;
+  width: 30px;
+  transform: scale(0.3) rotate(-45deg);
+}
+.heartAnimation {
+  background-color: var(--accent-clr-200);
+  animation: heartAnimation 1s ease-in;
+}
+
+.heart:before,
+.heart:after {
+  content: "";
+  background-color: inherit;
+  border-radius: 50%;
+  height: 30px;
+  position: absolute;
+  width: 30px;
+}
+
+.heart:before {
+  top: -15px;
+  left: 0;
+}
+
+.heart:after {
+  left: 15px;
+  top: 0;
+}
+
+@keyframes heartAnimation {
+  0%,
+  100% {
+    transform: scale(0.3) rotate(-45deg);
+  }
+  50% {
+    transform: scale(0.4) rotate(-45deg);
+  }
+}
+
 @media (min-width: 1100px) {
   .container {
     width: 80%;
