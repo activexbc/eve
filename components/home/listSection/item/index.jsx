@@ -1,12 +1,12 @@
 import { saveToCart } from "@/hooks/cart";
-import { getFirstObjectFromArray } from "@/hooks/getFirstItem";
+import { getFirstStringFromArray } from "@/hooks/getFirstItem";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import styles from "./styles.module.css";
 
 export default function ListItem({ product }) {
   const router = useRouter();
-  const firstImg = getFirstObjectFromArray(product.images);
+  const firstImg = getFirstStringFromArray(product.images);
 
   return (
     <div className={styles.productContainer} key={product.id}>

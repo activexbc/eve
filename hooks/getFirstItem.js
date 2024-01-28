@@ -1,6 +1,11 @@
-export const getFirstObjectFromArray = (arr) => {
-  if (Array.isArray(arr) && arr.length > 0) {
-    return arr[0];
+export const getFirstStringFromArray = (array) => {
+  if (
+    Array.isArray(array) &&
+    array.length > 0 &&
+    typeof array[0] === "string"
+  ) {
+    return array[0];
+  } else {
+    return null; // or any default value you want to return when the array is empty or doesn't contain strings
   }
-  return null; // Return null if the array is empty or not an array
 };

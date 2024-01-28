@@ -1,5 +1,6 @@
 "use client";
 
+import { getFirstStringFromArray } from "@/hooks/getFirstItem";
 import Image from "next/image";
 import { useState } from "react";
 import ProductReviews from "./reviews";
@@ -7,11 +8,12 @@ import styles from "./styles.module.css";
 
 export default function ProductDetails({ product }) {
   const [previewImg, setPreviewImg] = useState("");
+  const images = product?.images;
+  const firstString = getFirstStringFromArray(images);
 
-  if (!product) {
+  if (!product || !firstString) {
     return <div>Loading</div>;
   }
-  console.log(product);
 
   return (
     <>
@@ -20,7 +22,7 @@ export default function ProductDetails({ product }) {
         <div className={styles.imagesContainer}>
           <div className={styles.imgContainer}>
             <Image
-              src={previewImg ? previewImg : product ? product.images : ""}
+              src={previewImg ? previewImg : firstString}
               alt={product.name}
               fill
               priority

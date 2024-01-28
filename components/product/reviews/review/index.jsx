@@ -106,6 +106,7 @@ export default function ReviewItem({ item, productId, setLoading }) {
         currentUser={currentUser}
         itemId={item.id}
         productId={productId}
+        setLoading={setLoading}
       />
     </div>
   );

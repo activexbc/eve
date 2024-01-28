@@ -9,6 +9,7 @@ export default function ReviewComment({
   currentUser,
   productId,
   itemId,
+  setLoading,
 }) {
   const [comment, setComment] = useState("");
   const [commentsList, setCommentsList] = useState([]);
@@ -45,7 +46,7 @@ export default function ReviewComment({
                     className={styles.addCommentBtn}
                     onClick={handleAddComment}
                   >
-                    Add
+                    Reply
                   </button>
                 </div>
               </div>
