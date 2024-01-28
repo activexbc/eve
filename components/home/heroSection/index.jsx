@@ -10,7 +10,7 @@ export default function HeroSection({ bannerInfo }) {
     <section className={styles.container}>
       <div className={styles.imgContainer}>
         <Image
-          src={bannerInfo.imageURL}
+          src={bannerInfo?.imageURL}
           alt={"hi"}
           fill
           priority

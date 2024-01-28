@@ -14,7 +14,7 @@ export default function Home() {
     getBannerInfo().then((res) => setBannerInfo(res));
   }, []);
 
-  if (!bannerInfo.imageURL) {
+  if (!bannerInfo?.imageURL) {
     return <div>Loading</div>;
   }
 
