@@ -2,7 +2,6 @@
   width: 100%;
 }
 .commentContainer {
-  margin-left: 2rem;
   width: 100%;
 }
 .addCommentContainer {
@@ -19,6 +18,7 @@
   gap: 0.5rem;
   width: 100%;
   max-width: 600px;
+  margin-block: 0.5rem;
 }
 .input {
   width: 100%;

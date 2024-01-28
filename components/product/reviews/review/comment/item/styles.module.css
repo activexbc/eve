@@ -67,8 +67,17 @@
 .btnContainer:hover {
   opacity: 0.7;
 }
+.btnContainer > p {
+  display: none;
+}
 .icon {
   color: var(--primary-clr-200);
   font-size: var(--fs-300);
   font-weight: var(--fw-bold);
+}
+
+@media (min-width: 1100px) {
+  .btnContainer > p {
+    display: inline-block;
+  }
 }
