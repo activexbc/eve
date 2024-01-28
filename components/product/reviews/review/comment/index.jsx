@@ -25,7 +25,7 @@ export default function ReviewComment({
     getReviewCommentsById(productId, itemId).then((res) => {
       setCommentsList(res);
     });
-  }, []);
+  }, [itemId, productId]);
   return (
     <div className={styles.wrapper}>
       {openComment == true && (

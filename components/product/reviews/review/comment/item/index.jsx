@@ -23,7 +23,7 @@ export default function CommentItem({ item }) {
     <div className={styles.container}>
       <div className={styles.userContainer}>
         <p>{user.fName}</p>
-        <p>{user.lName}:</p>
+        <p>{user.lName}</p>
         <p> 0 Likes</p>
       </div>
       <div className={styles.commentContainer}>
